@@ -37,6 +37,7 @@ describe('linkedList', function() {
   });
 
   it('should contain a value that was added', function() {
+    debugger;
     linkedList.addToTail(4);
     linkedList.addToTail(5);
     expect(linkedList.contains(4)).to.equal(true);
