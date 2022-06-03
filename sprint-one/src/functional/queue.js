@@ -6,6 +6,8 @@ var Queue = function() {
 
   // Implement the methods below
 
+  // refactor has a variable accessible to all below functions - totalCount = 0 then rises when we add something, the enque function incrementing by one and then assigning it to storage with that new variable....
+
   someInstance.enqueue = function(value) {
 
     var index = 0;
@@ -42,11 +44,8 @@ var Queue = function() {
   };
 
   someInstance.size = function() {
-    var counter = 0;
-    Object.keys(storage).forEach(function (item) {
-      counter++;
-    });
-    return counter;
+    var storageSize = Object.keys(storage);
+    return storageSize.length;
   };
 
   return someInstance;
