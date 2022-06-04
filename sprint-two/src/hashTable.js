@@ -34,7 +34,7 @@ HashTable.prototype.remove = function(k) {
   var resultValue;
   for (let i = 0; i < bucketArray.length; i++) {
     if (bucketArray[i][0] === k) {
-      bucketArray.splice(i);
+      bucketArray.splice(i, 1);
     }
   }
 
@@ -45,6 +45,12 @@ HashTable.prototype.remove = function(k) {
 
 /*
  * Complexity: What is the time complexity of the above functions
+
+Insert - O(1)
+
+Retrieve - O(1)
+
+Remove - O(1)
  */
 
 

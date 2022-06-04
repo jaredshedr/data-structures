@@ -37,4 +37,13 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+
+  it('should return undefined when one child node is empty', function() {
+    binarySearchTree.insert(2);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(7);
+    binarySearchTree.insert(6);
+    expect(binarySearchTree.left.left).to.equal(undefined);
+    expect(binarySearchTree.right.right).to.equal(undefined);
+  });
 });

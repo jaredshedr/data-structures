@@ -35,6 +35,13 @@ describe('hashTable', function() {
     expect(hashTable.retrieve('Steven')).to.equal(undefined);
   });
 
+  it('should contain values that were not removed after removing a value', function() {
+    hashTable.insert('Steven', 'Tyler');
+    hashTable.insert('Rob', 'The Builder');
+    hashTable.remove('Steven');
+    expect(hashTable.retrieve('Rob')).to.equal('The Builder');
+  });
+
   it('should handle hash function collisions', function() {
     var v1 = 'val1';
     var v2 = 'val2';
