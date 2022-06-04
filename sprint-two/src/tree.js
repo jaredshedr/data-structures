@@ -11,7 +11,9 @@ var treeMethods = {};
 
 
 treeMethods.addChild = function(value) {
-  this.children.push(Tree(value));
+  if (value !== undefined) {
+    this.children.push(Tree(value));
+  }
 };
 
 

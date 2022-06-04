@@ -41,4 +41,9 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  it('should not add value to the tree if value is undefined', function() {
+    tree.addChild(undefined);
+    expect(tree.children[0]).to.equal(undefined);
+  });
+
 });
